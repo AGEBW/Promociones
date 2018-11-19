@@ -1,0 +1,113 @@
+﻿@model WebApplication1.Models.Entidades.bec_institutos_promociones
+
+@{
+    ViewData["Title"] = "PromocionesEditar";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<h4>bec_institutos_promociones</h4>
+<hr />
+<div class="row">
+   
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label>
+                    @Html.DisplayNameFor(model => model.IdPromocion)
+                </label>
+                <label>
+                    @Html.DisplayFor(model => model.IdPromocion)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdInstituto" class="control-label"></label>
+                <input asp-for="IdInstituto" class="form-control" />
+                <span asp-validation-for="IdInstituto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IdBeacon" class="control-label"></label>
+                <input asp-for="IdBeacon" class="form-control" />
+                <span asp-validation-for="IdBeacon" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DesPromocion" class="control-label"></label>
+                <input asp-for="DesPromocion" class="form-control" />
+                <span asp-validation-for="DesPromocion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaHoraIni" class="control-label"></label>
+                <input asp-for="FechaHoraIni" class="form-control" />
+                <span asp-validation-for="FechaHoraIni" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaHoraFin" class="control-label"></label>
+                <input asp-for="FechaHoraFin" class="form-control" />
+                <span asp-validation-for="FechaHoraFin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaReg" class="control-label"></label>
+                <input asp-for="FechaReg" class="form-control" />
+                <span asp-validation-for="FechaReg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Activo" class="control-label"></label>
+                <select asp-for="Activo" class="form-control" asp-items=@ViewBag.TiposUsuario></select>
+                <span asp-validation-for="Activo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenUrl" class="control-label"></label>
+                <input asp-for="ImagenUrl" class="form-control" />
+                <span asp-validation-for="ImagenUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenBLOB" class="control-label"></label>
+                <input asp-for="ImagenBLOB" class="form-control" />
+                <span asp-validation-for="ImagenBLOB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FechaUltMod" class="control-label"></label>
+                <input asp-for="FechaUltMod" class="form-control" />
+                <span asp-validation-for="FechaUltMod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioReg" class="control-label"></label>
+                <input asp-for="UsuarioReg" class="form-control" />
+                <span asp-validation-for="UsuarioReg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UsuarioMod" class="control-label"></label>
+                <input asp-for="UsuarioMod" class="form-control" />
+                <span asp-validation-for="UsuarioMod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Borrado" class="control-label"></label>
+                <select asp-for="Borrado" class="form-control" asp-items=@ViewBag.TiposUsuario></select>
+                <span asp-validation-for="Borrado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagenLocal" class="control-label"></label>
+                <input asp-for="ImagenLocal" class="form-control" />
+                <span asp-validation-for="ImagenLocal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+</body>
+</html>
